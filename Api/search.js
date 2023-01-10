@@ -16,12 +16,12 @@ router.get("", async (req, res) => {
 
     $("div.MjjYud").each((i, el) => {
       if ($("div.MjjYud").length !== i + 1) {
-        if ($(el).find(".lyLwlc").text()) {
-          results[i] = {
+        if ($(el).find(".DKV0Md").text()) {
+          results.push({
             title: $(el).find(".DKV0Md").text(),
             snippet: $(el).find(".lyLwlc").text(),
             link: $(el).find(".iUh30 span").first().text(),
-          };
+          });
         }
       } else {
         res.status(200).json(results);
